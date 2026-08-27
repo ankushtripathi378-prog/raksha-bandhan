@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Sadhna Didiii & Gauri ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    background:#071a32;
+    color:#f8f5ff;
+    font-family:Georgia,"Times New Roman",serif;
+}
+
+#app{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 50% 40%,
+        #315f91 0%,
+        #173e6b 45%,
+        #071a32 100%
+    );
+}
+
+
+/* =========================
+   SCENES
+========================= */
+
+.scene{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+
+    text-align:center;
+    padding:28px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:scale(1.025);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+.scene.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:clamp(38px,10vw,72px);
+
+    font-weight:400;
+
+    letter-spacing:1px;
+
+    line-height:1.15;
+
+    margin:18px 0;
+
+    text-shadow:
+        0 3px 20px
+        rgba(0,0,0,.25);
+}
+
+h2{
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:clamp(25px,6.5vw,46px);
+
+    font-weight:400;
+
+    letter-spacing:.5px;
+
+    line-height:1.25;
+
+    margin:15px 0;
+
+    text-shadow:
+        0 2px 14px
+        rgba(0,0,0,.2);
+}
+
+p{
+    max-width:650px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:clamp(16px,4.2vw,21px);
+
+    font-weight:300;
+
+    letter-spacing:.4px;
+
+    line-height:1.7;
+
+    color:
+        rgba(255,255,255,.9);
+}
+
+
+/* =========================
+   NAMES
+========================= */
+
+.name{
+    color:#ffe7a6;
+
+    background:none;
+
+    animation:none;
+
+    font-weight:400;
+
+    letter-spacing:1px;
+
+    text-shadow:
+        0 2px 18px
+        rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+    margin-top:30px;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.55);
+
+    background:
+        rgba(255,255,255,.12);
+
+    color:white;
+
+    font-family:Arial,sans-serif;
+
+    font-size:16px;
+
+    letter-spacing:.3px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,.15);
+
+    backdrop-filter:blur(10px);
+
+    transition:.25s;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+#musicBtn{
+    position:fixed;
+
+    top:15px;
+    right:15px;
+
+    z-index:100;
+
+    margin:0;
+
+    padding:9px 14px;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   RAKHI
+========================= */
+
+.rakhi{
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    position:relative;
+
+    animation:
+        float 3.5s ease-in-out infinite;
+}
+
+.rakhi:before{
+    content:"";
+
+    position:absolute;
+
+    width:64px;
+    height:64px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff1a8,
+            #e6a72c
+        );
+
+    left:58px;
+    top:58px;
+
+    box-shadow:
+        0 0 25px
+        rgba(255,214,100,.45);
+}
+
+.rakhi:after{
+    content:"✦";
+
+    position:absolute;
+
+    left:40px;
+    top:27px;
+
+    font-size:100px;
+
+    color:#eeb83f;
+
+    opacity:.9;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-2deg);
+    }
+
+    50%{
+        transform:
+            translateY(-14px)
+            rotate(2deg);
+    }
+}
+
+
+/* =========================
+   CAT
+========================= */
+
+.cat{
+    width:min(72vw,310px);
+    height:min(72vw,310px);
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:
+        2px solid
+        rgba(255,255,255,.8);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,.3);
+
+    animation:
+        catIn 1.2s ease;
+}
+
+@keyframes catIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            scale(.85)
+            translateY(15px);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   EMOJI
+========================= */
+
+.emoji{
+    font-size:76px;
+
+    margin-bottom:12px;
+}
+
+
+/* =========================
+   BEST BROTHER
+========================= */
+
+.badge{
+    font-family:Arial,sans-serif;
+
+    font-size:
+        clamp(13px,3.5vw,18px);
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+    padding:8px 17px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.4);
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+
+/* =========================
+   SOFT GLOW
+========================= */
+
+.glow{
+    animation:none;
+
+    text-shadow:
+        0 3px 20px
+        rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   FLOATING SPRINKLES
+========================= */
+
+.particle{
+    position:absolute;
+
+    bottom:-50px;
+
+    pointer-events:none;
+
+    animation:
+        rise linear infinite;
+
+    opacity:.72;
+
+    z-index:2;
+}
+
+@keyframes rise{
+
+    0%{
+        transform:
+            translateY(0)
+            scale(.6)
+            rotate(0);
+
+        opacity:0;
+    }
+
+    20%{
+        opacity:.75;
+    }
+
+    100%{
+        transform:
+            translateY(-115vh)
+            scale(1.15)
+            rotate(150deg);
+
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="app">
+
+
+<!-- MUSIC -->
+
+<button
+    id="musicBtn"
+    onclick="toggleMusic()">
+
+    🔇 Music
+
+</button>
+
+
+<!-- =====================
+     1. OPENING
+===================== -->
+
+<section class="scene active">
+
+    <p>
+        A little surprise...
+    </p>
+
+    <h1>
+        Just For You ❤️
+    </h1>
+
+    <p>
+        Something special for
+        two very special sisters.
+    </p>
+
+    <button onclick="startShow()">
+        Open Surprise ❤️
+    </button>
+
+</section>
+
+
+<!-- =====================
+     2. RAKHI
+===================== -->
+
+<section class="scene">
+
+    <div class="rakhi"></div>
+
+    <p>
+        A Rakhi is just a thread...
+    </p>
+
+    <h2 class="name">
+        But the bond is forever. ❤️
+    </h2>
+
+</section>
+
+
+<!-- =====================
+     3. NAMES
+===================== -->
+
+<section class="scene">
+
+    <p>
+        This one is specially for...
+    </p>
+
+    <h1 class="name">
+
+        SADHNA DIDIII
+
+        <br><br>
+
+        &
+
+        <br><br>
+
+        GAURI
+
+    </h1>
+
+    <p>
+        🌸 My two very special sisters 🌸
+    </p>
+
+</section>
+
+
+<!-- =====================
+     4. CAT
+===================== -->
+
+<section class="scene">
+
+    <img
+        src="cat.jpg"
+        class="cat"
+        alt="Funny Cat">
+
+    <h2>
+        Wait... 🐱
+    </h2>
+
+    <p>
+        Are you expecting a Rakhi gift?
+    </p>
+
+</section>
+
+
+<!-- =====================
+     5. GIFT QUESTION
+===================== -->
+
+<section class="scene">
+
+    <div class="emoji">
+        👀
+    </div>
+
+    <h2>
+        I know what you're thinking...
+    </h2>
+
+    <p>
+        So... where's my gift? 😂
+    </p>
+
+</section>
+
+
+<!-- =====================
+     6. ME
+     SEPARATE PAGE
+===================== -->
+
+<section class="scene">
+
+    <div class="emoji">
+        🎁😎
+    </div>
+
+    <p>
+        Well...
+    </p>
+
+    <h1 class="glow">
+        ME.
+    </h1>
+
+    <p>
+        I am the gift. 😂❤️
+    </p>
+
+</section>
+
+
+<!-- =====================
+     7. BEST BROTHER
+===================== -->
+
+<section class="scene">
+
+    <div class="emoji">
+        🏆
+    </div>
+
+    <div class="badge">
+        OFFICIALLY CERTIFIED
+    </div>
+
+    <h1 class="glow">
+        WORLD'S BEST<br>
+        BROTHER
+    </h1>
+
+    <p>
+        No further questions. 😎
+    </p>
+
+</section>
+
+
+<!-- =====================
+     8. EMOTIONAL
+===================== -->
+
+<section class="scene">
+
+    <div class="emoji">
+        ❤️
+    </div>
+
+    <p>
+        Okay... jokes apart.
+    </p>
+
+    <h2 class="name">
+        I'm really lucky to have you both.
+    </h2>
+
+</section>
+
+
+<!-- =====================
+     9. MEMORIES
+===================== -->
+
+<section class="scene">
+
+    <div class="emoji">
+        🌸
+    </div>
+
+    <p>
+        Thank you for all the
+        smiles, laughter, memories
+        and love.
+    </p>
+
+    <h2 class="name">
+        You both are truly special. ❤️
+    </h2>
+
+</section>
+
+
+<!-- =====================
+     10. FINAL
+===================== -->
+
+<section class="scene">
+
+    <div class="emoji">
+        🧵❤️
+    </div>
+
+    <h1>
+        Happy<br>
+        Raksha Bandhan
+    </h1>
+
+    <h2 class="name">
+        SADHNA DIDIII & GAURI
+    </h2>
+
+    <p>
+        May our bond always remain
+        beautiful. ❤️
+    </p>
+
+</section>
+
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+</div>
+
+
+<script>
+
+const scenes =
+    document.querySelectorAll(".scene");
+
+const music =
+    document.getElementById("music");
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+let current = 0;
+
+
+/* START */
+
+function startShow(){
+
+    music.play().catch(()=>{});
+
+    musicBtn.innerText =
+        "🔊 Music";
+
+    current = 1;
+
+    showScene();
+
+    setTimeout(
+        nextScene,
+        5000
+    );
+}
+
+
+/* SHOW */
+
+function showScene(){
+
+    scenes.forEach(scene => {
+
+        scene.classList.remove(
+            "active"
+        );
+
+    });
+
+    scenes[current]
+        .classList.add("active");
+}
+
+
+/* NEXT */
+
+function nextScene(){
+
+    if(current < scenes.length - 1){
+
+        current++;
+
+        showScene();
+
+        setTimeout(
+            nextScene,
+            5000
+        );
+
+    }
+
+}
+
+
+/* MUSIC */
+
+function toggleMusic(){
+
+    if(music.paused){
+
+        music.play();
+
+        musicBtn.innerText =
+            "🔊 Music";
+
+    }else{
+
+        music.pause();
+
+        musicBtn.innerText =
+            "🔇 Music";
+
+    }
+
+}
+
+
+/* FLOATING SPRINKLES */
+
+const symbols = [
+
+    "💗",
+    "🌟",
+    "🌸",
+    "🌷",
+    "♥️",
+    "✨"
+
+];
+
+
+for(
+    let i = 0;
+    i < 35;
+    i++
+){
+
+    const particle =
+        document.createElement(
+            "div"
+        );
+
+    particle.className =
+        "particle";
+
+    particle.innerText =
+        symbols[
+            Math.floor(
+                Math.random()
+                * symbols.length
+            )
+        ];
+
+    particle.style.left =
+        Math.random()*100 + "%";
+
+    particle.style.fontSize =
+        (
+            14 +
+            Math.random()*18
+        ) + "px";
+
+    particle.style.animationDuration =
+        (
+            7 +
+            Math.random()*8
+        ) + "s";
+
+    particle.style.animationDelay =
+        Math.random()*8 + "s";
+
+    document
+        .getElementById("app")
+        .appendChild(
+            particle
+        );
+}
+
+</script>
+
+</body>
+</html>
